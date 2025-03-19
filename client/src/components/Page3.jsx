@@ -1,11 +1,13 @@
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function Page3() {
+    const location = useLocation();
+
     const navigateTo = async (nextPage) => {
         try {
             await axios.post("http://localhost:8080/hmm/update", {
-                from: "Page3",
+                from: location.pathname.replace("/", "") || "Page3",
                 to: nextPage,
             });
         } catch (error) {
@@ -14,20 +16,22 @@ function Page3() {
     };
 
     return (
-        <div>
-            <h1>Page 3</h1>
-            <p>You are on Page 3. Choose where to go next:</p>
+        <div className="page-container">
+            <h2>Indoor Positioning Systems</h2>
+            <p>
+                **Indoor positioning** is used in **hospitals, airports, and shopping malls**, where 
+                GPS is unreliable. Methods include:
+            </p>
             <ul>
-                <li>
-                    <Link to="/page2" onClick={() => navigateTo("Page2")}>Go to Page 2</Link>
-                </li>
-                <li>
-                    <Link to="/page4" onClick={() => navigateTo("Page4")}>Go to Page 4</Link>
-                </li>
-                <li>
-                    <Link to="/" onClick={() => navigateTo("AccessPage")}>Back to Access Page</Link>
-                </li>
+                <li><strong>WiFi Fingerprinting:</strong> Mapping signal strengths for localization.</li>
+                <li><strong>Bluetooth Beacons:</strong> Using low-energy Bluetooth signals.</li>
+                <li><strong>IMU Sensors:</strong> Tracking motion via accelerometers and gyroscopes.</li>
             </ul>
+
+            <div className="nav-buttons">
+                <Link to="/page4" className="btn" onClick={() => navigateTo("Page4")}>Next: Outdoor Positioning Systems</Link>
+                <Link to="/page2" className="btn back-btn" onClick={() => navigateTo("Page2")}>Back to HMM in Positioning</Link>
+            </div>
         </div>
     );
 }

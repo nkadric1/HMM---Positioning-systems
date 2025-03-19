@@ -1,0 +1,72 @@
+/* AccessPage Styles */
+.access-page-container {
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+}
+
+/* Current Page Info (Top Right) */
+.access-page-info {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.05);
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: left;
+}
+
+/* Navigation Section */
+.access-nav-section {
+    margin-top: 20px;
+}
+
+/* Navigation Buttons */
+.access-nav-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Button Styles */
+.access-btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    background-color: #007bff;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.access-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Statistics Button */
+.access-stats-btn {
+    background-color: #28a745;
+}
+
+.access-stats-btn:hover {
+    background-color: #1e7e34;
+}
+
+/* Quit Button */
+.access-quit-btn {
+    background-color: #dc3545;
+    margin-top: 10px;
+}
+
+.access-quit-btn:hover {
+    background-color: #a71d2a;
+}

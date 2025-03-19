@@ -1,18 +1,30 @@
-import { useEffect, useState } from "react";
 import axios from "axios";
+import { useEffect, useState } from "react";
 
 function Statistics() {
-    const [probabilities, setProbabilities] = useState({});
+    const [hmmData, setHmmData] = useState(null);
 
     useEffect(() => {
-        axios.get("http://localhost:8080/hmm/probabilities")
-            .then(response => setProbabilities(response.data));
+        const fetchData = async () => {
+            try {
+                const response = await axios.get("http://localhost:8080/hmm/probabilities");
+                setHmmData(response.data);
+            } catch (error) {
+                console.error("Error fetching statistics:", error);
+            }
+        };
+
+        fetchData();
     }, []);
 
     return (
-        <div>
-            <h1>HMM Transition Probabilities</h1>
-            <pre>{JSON.stringify(probabilities, null, 2)}</pre>
+        <div className="page-container">
+            <h2>Navigation Statistics</h2>
+            {hmmData ? (
+                <pre>{JSON.stringify(hmmData, null, 2)}</pre>
+            ) : (
+                <p>Loading statistics...</p>
+            )}
         </div>
     );
 }
