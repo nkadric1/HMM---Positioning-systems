@@ -15,7 +15,6 @@ useEffect(()=>{
   fetchAPI();
 }, []);
 
-
   return (
     <>
       <div>
