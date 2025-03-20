@@ -1,25 +1,44 @@
-/* AccessPage Styles */
+/* Full-screen layout */
 .access-page-container {
-    padding: 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100vw; /* Full width */
+    height: 100vh; /* Full height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f4;
     text-align: center;
-    position: relative;
-    max-width: 600px;
-    margin: auto;
 }
 
-/* Current Page Info (Top Right) */
-.access-page-info {
+/* Navigation Menu (Top) */
+.access-nav-menu {
+    width: 100%;
+    padding: 15px 0;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: absolute;
-    top: 10px;
-    right: 10px;
-    background: rgba(0, 0, 0, 0.05);
-    padding: 8px 15px;
-    border-radius: 5px;
-    font-size: 14px;
-    text-align: left;
+    top: 0;
+    left: 0;
+    text-align: center;
+}
+
+.access-nav-menu a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.access-nav-menu a:hover {
+    color: #007bff;
+}
+
+/* Title in the center */
+.access-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 80px;
 }
 
 /* Navigation Section */
