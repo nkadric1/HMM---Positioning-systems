@@ -4,15 +4,19 @@ class Cell extends InterfaceCell {
     constructor() {
         super();
         this.nb = 0; // Number of visits
-        this.transitions = {}; // Tracks transitions to other pages
+        this.previous = 0; // Tracks transitions to other pages
+        this.next = 0;
     }
 
-    updateTransition(to) {
-        if (!this.transitions[to]) {
-            this.transitions[to] = 0;
+    updateTransition(to) { //to is j column
+        console.log("transition is ", to)
+        if (to) {
+            this.nb++;
+            
         }
-        this.transitions[to] += 1;
-        this.nb += 1;
+        
+        console.log("number is ", this.nb)
+
     }
 
     calculateProbabilities() {
