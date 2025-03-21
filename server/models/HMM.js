@@ -2,19 +2,25 @@ import Cell from "./Cell.js";
 
 class HMM {
     constructor(pages) {
-        this.pages = pages;
-        this.transitionMatrix = [];
-        this.sums_rows = Array(pages.length).fill(0); // Initialize with zeros
-        this.sums_columns = Array(pages.length).fill(0); // Initialize with zeros
+        if (!HMM.instance) {
+            this.pages = pages;
+            this.transitionMatrix = [];
+            this.sums_rows = Array(pages.length).fill(0);
+            this.sums_columns = Array(pages.length).fill(0);
 
-        // Initialize matrix with Cell objects
-        for (let i = 0; i < pages.length; i++) {
-            this.transitionMatrix[i] = [];
-            for (let j = 0; j < pages.length; j++) {
-                this.transitionMatrix[i][j] = new Cell(); // Initialize each cell
+            // Initialize matrix with Cell objects
+            for (let i = 0; i < pages.length; i++) {
+                this.transitionMatrix[i] = [];
+                for (let j = 0; j < pages.length; j++) {
+                    this.transitionMatrix[i][j] = new Cell();
+                }
             }
+
+            HMM.instance = this; // Store the instance
         }
+        return HMM.instance; // Always return the same instance
     }
+
 
     updateHMM(from, to) { // i = row, j = column
        

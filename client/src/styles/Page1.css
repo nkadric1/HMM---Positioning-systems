@@ -1,15 +1,63 @@
-/* Page1 Styles */
-.page1-container {
-    padding: 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    max-width: 600px;
-    margin: auto;
+/* Reset stilova za dosljednost */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Buttons */
+/* Osnovni stil za tijelo stranice */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #E9E3D8; /* Blaga bež, u skladu s AccessPage */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Omotač koji osigurava da je sadržaj centriran */
+.page1-wrapper {
+    display: flex;
+    justify-content: center; /* Centriranje horizontalno */
+    align-items: center; /* Centriranje vertikalno */
+    height: calc(100vh - 100px); /* Oduzimanje visine navigacije */
+    width: 100%;
+}
+
+/* Centriranje kartice */
+.page1-container {
+    margin-top: -80px; /* Smanjeno podizanje da bude vizuelno bolje */
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 600px;
+    width: 90%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Stil za naslov */
+.page1-container h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #5A5148; /* Topla smeđa, u skladu s AccessPage */
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Stil za tekst */
+.page1-container p {
+    font-size: 16px;
+    color: #4D4238; /* Tamna siva-smeđa za bolju čitljivost */
+    margin-bottom: 20px;
+}
+
+/* Stilizacija dugmadi */
 .page1-btn {
     padding: 10px 15px;
     border: none;
@@ -17,12 +65,31 @@
     text-decoration: none;
     font-weight: bold;
     color: white;
-    background-color: #007bff;
+    background-color: #A4C1AA; /* Maslinasto zelena, isto kao AccessPage */
     transition: 0.3s;
     cursor: pointer;
     margin: 10px;
 }
 
 .page1-btn:hover {
-    background-color: #0056b3;
+    background-color: #8EA995; /* Blago tamnija maslinasta */
+}
+
+/* Dugmad u istoj liniji */
+.buttons {
+    display: flex;
+    gap: 15px; /* Razmak između dugmadi */
+}
+
+/* Navigacija */
+.top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #D7D1C4; /* Svijetlo bež, isto kao AccessPage info bar */
+    padding: 15px 0;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
 }

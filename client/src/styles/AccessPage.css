@@ -1,57 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgba(233, 226, 213, 0.482); /* Glavna pozadina */
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Container */
+.top-nav {
+    background-color: #D6CFC4; /* Boja headera */
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #5A5148; 
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
 /* Full-screen layout */
 .access-page-container {
-    width: 100vw; /* Full width */
-    height: 100vh; /* Full height */
+    width: 100vw;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #f4f4f4;
+    background-color: transparent; /* Transparentan donji kontejner */
     text-align: center;
+    margin-top: -100px;
+
 }
 
-/* Navigation Menu (Top) */
-.access-nav-menu {
+/* Info Section */
+.access-page-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
-    padding: 15px 0;
-    background-color: white;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    padding: 10px 20px;
+    color: #5A5148;
+    font-size: 16px;
+    font-weight: 500;
     position: absolute;
-    top: 0;
-    left: 0;
-    text-align: center;
-}
-
-.access-nav-menu a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-}
-
-.access-nav-menu a:hover {
-    color: #007bff;
-}
-
-/* Title in the center */
-.access-title {
-    font-size: 32px;
-    font-weight: bold;
-    color: #333;
-    margin-top: 80px;
-}
-
-/* Navigation Section */
-.access-nav-section {
-    margin-top: 20px;
+    top: 80px; 
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 8px;
 }
 
 /* Navigation Buttons */
 .access-nav-buttons {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     gap: 10px;
+    margin-top: 20px;
 }
 
 /* Button Styles */
@@ -62,30 +70,32 @@
     text-decoration: none;
     font-weight: bold;
     color: white;
-    background-color: #007bff;
+    background-color: #A4C1AA; /* Maslinasta */
     transition: 0.3s;
     cursor: pointer;
+    width: 200px;
 }
 
 .access-btn:hover {
-    background-color: #0056b3;
+    background-color: #8EA995; /* Tamnija zelena */
 }
 
 /* Statistics Button */
 .access-stats-btn {
-    background-color: #28a745;
+    background-color: #B9A394; /* Svijetlo bež */
 }
 
 .access-stats-btn:hover {
-    background-color: #1e7e34;
+    background-color: #A18C7B;
+    color: white;
 }
 
 /* Quit Button */
 .access-quit-btn {
-    background-color: #dc3545;
-    margin-top: 10px;
+    background-color: #C65F5F;
 }
 
 .access-quit-btn:hover {
-    background-color: #a71d2a;
+    background-color: #9B3939;
+    color: black;
 }

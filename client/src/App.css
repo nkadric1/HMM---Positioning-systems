@@ -1,111 +1,86 @@
-/* Full-screen layout */
-.access-page-container {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #f4f4f4;
-  text-align: center;
-  overflow: hidden;
-  position: relative;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgba(233, 226, 213, 0.482);
+    margin: 0;
+    padding: 0;
+}
+h1{
+  font-size: 36px;
 }
 
-/* Prevent scrolling on the whole page */
-html, body {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
+/* Fixed Navigation */
+.top-nav {
+    background-color: #D6CFC4;
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
-/* Fixed Navigation Menu at the Top */
-.access-nav-menu {
-  width: 100%;
-  padding: 15px 0;
-  background-color: white;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  position: fixed;
-  top: 0;
-  left: 0;
-  text-align: center;
-  z-index: 1000;
-}
-
-.access-nav-menu a {
-  margin: 0 15px;
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-}
-
-.access-nav-menu a:hover {
-  color: #007bff;
-}
-
-/* Title centered */
+/* Title */
 .access-title {
-  font-size: 32px;
-  font-weight: bold;
-  color: #333;
-  position: absolute;
-  top: 20%;
-  transform: translateY(-50%);
+    font-size: 32px;
+    font-weight: bold;
+    color: #5A5148;
+    margin-top: 120px;
+    text-align: center;
 }
 
-/* Current Page Info (Top Right Corner) */
-.access-page-info {
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  background: rgba(0, 0, 0, 0.05);
-  padding: 8px 15px;
-  border-radius: 5px;
-  font-size: 14px;
-  text-align: left;
+/* Prevent scrolling */
+html, body {
+    overflow: hidden;
 }
 
-/* Navigation Buttons - Aligned Vertically */
+/* Navigation Buttons */
 .access-nav-buttons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
 }
 
-/* Button Styles */
+/* Buttons */
 .access-btn {
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  color: white;
-  background-color: #007bff;
-  transition: 0.3s;
-  cursor: pointer;
-  width: 200px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    background-color: #A4C1AA;
+    transition: 0.3s;
+    cursor: pointer;
+    width: 200px;
 }
 
 .access-btn:hover {
-  background-color: #0056b3;
+    background-color: #8EA995;
 }
 
 /* Statistics Button */
 .access-stats-btn {
-  background-color: #28a745;
+    background-color: #B9A394;
 }
 
 .access-stats-btn:hover {
-  background-color: #1e7e34;
+    background-color: #A18C7B;
+    color: white;
 }
 
 /* Quit Button */
 .access-quit-btn {
-  background-color: #dc3545;
+    background-color: #C65F5F;
 }
 
 .access-quit-btn:hover {
-  background-color: #a71d2a;
+    background-color: #9B3939;
+    color: black;
 }

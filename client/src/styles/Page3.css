@@ -1,0 +1,109 @@
+/* Reset stilova */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Osnovni stil za tijelo stranice */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #E9E3D8; /* Ista pozadina kao Page1 i Page2 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Omotač koji centirira sadržaj */
+.page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 100px); /* Oduzimanje visine navigacije */
+    width: 100%;
+}
+
+/* Centriranje kartice */
+.page3-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 600px;
+    width: 90%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Stil za naslov */
+.page3-card h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #5A5148; /* Tamna bež */
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Stil za paragraf */
+.page3-card p {
+    font-size: 16px;
+    color: #4D4238; /* Tamnija siva */
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Stil za listu */
+.page3-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.page3-card ul li {
+    font-size: 16px;
+    color: #4D4238;
+    padding: 5px 0;
+    text-align: center;
+}
+
+/* Dugmad */
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Stil dugmadi */
+.btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    background-color: #A4C1AA; /* Maslinasta zelena */
+    transition: 0.3s;
+    cursor: pointer;
+    min-width: 200px;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #8EA995; /* Tamnija zelena */
+}
+
+/* Dugme za povratak */
+.back-btn {
+    background-color: #B9A394; /* Svijetlo bež */
+}
+
+.back-btn:hover {
+    background-color: #A18C7B;
+    color: white;
+}

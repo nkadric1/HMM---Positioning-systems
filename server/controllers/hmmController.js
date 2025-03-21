@@ -1,17 +1,24 @@
 import HMM from "../models/HMM.js";
 
-const pages = ["AccessPage", "Page1", "Page2", "Page3", "Page4"];
+//const pages = ["AccessPage", "Page1", "Page2", "Page3", "Page4"];
+
+const pages = ["Access Page", "Page1", "Page2", "Page3", "Page4", "Statistics"];
 const hmm = new HMM(pages);
 
 export const updateHMM = (req, res) => {
     const { from, to } = req.body;
-    if (!from || !to) {
-        return res.status(400).json({ error: "Missing parameters" });
+
+    const fromIndex = pages.indexOf(from);
+    const toIndex = pages.indexOf(to);
+
+    if (fromIndex === -1 || toIndex === -1) {
+        return res.status(400).json({ error: "Invalid page names received" });
     }
 
-    hmm.updateHMM(from, to);
-    res.json({ message: "HMM Updated", probabilities: hmm.getProbabilities() });
+    hmm.updateHMM(fromIndex, toIndex);
+    res.json({ message: "HMM updated successfully", matrix: hmm.getMatrix() });
 };
+
 
 export const getProbabilities = (req, res) => {
     res.json(hmm.getProbabilities());
