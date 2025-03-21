@@ -1,14 +1,14 @@
-/* Reset stilova */
+/* Reset styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Osnovni stil za tijelo stranice */
+/* Page background */
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #E9E3D8; /* Ista pozadina kao Page1 i Page2 */
+    background-color: #E9E3D8;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -16,16 +16,48 @@ body {
     min-height: 100vh;
 }
 
-/* Omotač koji centirira sadržaj */
+/* Page container */
 .page-container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: calc(100vh - 100px); /* Oduzimanje visine navigacije */
+    justify-content: center;
+    height: calc(100vh - 100px);
     width: 100%;
 }
 
-/* Centriranje kartice */
+/* Info Section - Box container */
+.access-page-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 80px; 
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Box Styling for "From" and "Current Page" */
+.page-info-box {
+    background-color: #A4C1AA;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-align: center;
+    min-width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure Exactly 100px Space Between Boxes */
+.page-info-box + .page-info-box {
+    margin-left: 220px;
+}
+
+/* Centering content card */
 .page3-card {
     background: white;
     border-radius: 10px;
@@ -38,26 +70,26 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 120px;
 }
 
-/* Stil za naslov */
+/* Title styling */
 .page3-card h2 {
-    font-size: 24px;
-    font-weight: bold;
-    color: #5A5148; /* Tamna bež */
+    font-size: 22px;
+    color: #5A5148;
     margin-bottom: 15px;
     text-align: center;
 }
 
-/* Stil za paragraf */
+/* Paragraph text */
 .page3-card p {
-    font-size: 16px;
-    color: #4D4238; /* Tamnija siva */
+    font-size: 14px;
+    color: #4D4238;
     margin-bottom: 15px;
     text-align: center;
 }
 
-/* Stil za listu */
+/* List styling */
 .page3-card ul {
     list-style: none;
     padding: 0;
@@ -65,45 +97,114 @@ body {
 }
 
 .page3-card ul li {
-    font-size: 16px;
+    font-size: 14px;
     color: #4D4238;
     padding: 5px 0;
     text-align: center;
 }
 
-/* Dugmad */
+/* ✅ Uniform navigation button container */
 .nav-buttons {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
+    gap: 10px;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
-/* Stil dugmadi */
-.btn {
-    padding: 12px 20px;
+/* ✅ All buttons are the same size */
+.btn, 
+.back-btn,
+.stats-btn,
+.access-quit-btn {
+    padding: 10px 15px;
     border: none;
     border-radius: 5px;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 500;
+    font-size: 14px;
     color: white;
-    background-color: #A4C1AA; /* Maslinasta zelena */
+    background-color: #A4C1AA;
     transition: 0.3s;
     cursor: pointer;
-    min-width: 200px;
+    min-width: 220px;  /* ✅ Osigurava istu širinu */
+    max-width: 220px;
+    height: 50px;
     text-align: center;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.btn:hover {
-    background-color: #8EA995; /* Tamnija zelena */
-}
-
-/* Dugme za povratak */
-.back-btn {
-    background-color: #B9A394; /* Svijetlo bež */
-}
-
+/* ✅ Ensuring uniform button hover */
+.btn:hover, 
 .back-btn:hover {
-    background-color: #A18C7B;
-    color: white;
+    background-color: #8EA995;
+}
+
+/* ✅ Statistics button - Brown with white text */
+.stats-btn {
+    background-color: #B9A394 !important;
+    color: white !important;
+}
+
+.stats-btn:hover {
+    background-color: #A18C7B !important;
+}
+
+/* ✅ Quit button - Red with white text */
+.access-quit-btn {
+    background-color: #C65F5F;
+    color: white !important;
+}
+
+.access-quit-btn:hover {
+    background-color: #9B3939;
+}
+
+/* ✅ Fix button alignment in last row */
+.special-buttons {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+}
+
+/* ✅ Ensure View Statistics & Leave/Quit align properly */
+.special-buttons .stats-btn,
+.special-buttons .access-quit-btn {
+    min-width: 220px;
+    max-width: 220px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ✅ Responsive Fix */
+@media (max-width: 768px) {
+    .access-page-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .page-info-box {
+        min-width: 160px;
+    }
+
+    .page-info-box + .page-info-box {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .btn {
+        min-width: 180px;
+    }
+
+    .special-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
 }

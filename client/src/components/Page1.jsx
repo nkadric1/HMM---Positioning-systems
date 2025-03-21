@@ -33,10 +33,15 @@ function Page1() {
         
         <div className="page1-wrapper">
                        {/* Current Page Info (Top Right) */}
-                       <div className="access-page-info">
-            <p className="from-inf"><strong>From:</strong> {previousPage}</p>
-            <p className="curr-inf"><strong>Current Page:</strong>Page 1</p>
-            </div>
+            <div className="access-page-info">
+    <div className="page-info-box">
+        <strong>From: </strong> {previousPage}
+    </div>
+    <div className="page-info-box">
+        <strong>Current Page: </strong> Page 1
+    </div>
+</div>
+
             <div className="page1-container">
                 <h1>Introduction to Hidden Markov Models</h1>
                 <p>HMMs are used in various fields like speech recognition, positioning, and more.</p>

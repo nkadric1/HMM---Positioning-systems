@@ -1,14 +1,14 @@
-/* Reset stilova za dosljednost */
+/* Reset styles for consistency */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Osnovni stil za tijelo stranice */
+/* Page background */
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #E9E3D8; /* Blaga bež, u skladu s AccessPage */
+    background-color: #E9E3D8;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -16,18 +16,51 @@ body {
     min-height: 100vh;
 }
 
-/* Omotač koji osigurava da je sadržaj centriran */
+/* Page container */
 .page1-wrapper {
     display: flex;
-    justify-content: center; /* Centriranje horizontalno */
-    align-items: center; /* Centriranje vertikalno */
-    height: calc(100vh - 100px); /* Oduzimanje visine navigacije */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 100px);
     width: 100%;
 }
 
-/* Centriranje kartice */
+/* Info Section - Box container */
+.access-page-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 80px; 
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Box Styling for "From" and "Current Page" */
+.page-info-box {
+    background-color: #A4C1AA; /* Maslinasta zelena - isto kao dugmad */
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-align: center;
+    min-width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 🔥 Ensure Exactly 100px Space Between Boxes */
+.page-info-box + .page-info-box {
+    margin-left: 200px; /* ⚡ Precizan razmak između dva boxa */
+}
+
+/* Content card */
 .page1-container {
-    margin-top: -80px; /* Smanjeno podizanje da bude vizuelno bolje */
+    margin-top: 50px;
     background: white;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -39,57 +72,111 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 50px;
 }
 
-/* Stil za naslov */
+/* Title styling */
 .page1-container h1 {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: bold;
-    color: #5A5148; /* Topla smeđa, u skladu s AccessPage */
+    color: #5A5148;
     margin-bottom: 15px;
     text-align: center;
 }
 
-/* Stil za tekst */
+/* Description text */
 .page1-container p {
-    font-size: 16px;
-    color: #4D4238; /* Tamna siva-smeđa za bolju čitljivost */
+    font-size: 14px;
+    color: #4D4238;
     margin-bottom: 20px;
 }
 
-/* Stilizacija dugmadi */
-.page1-btn {
+/* Navigation button container */
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Uniform button styling */
+.page1-btn, 
+.access-btn {
     padding: 10px 15px;
     border: none;
     border-radius: 5px;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 500;
+    font-size: 14px;
     color: white;
-    background-color: #A4C1AA; /* Maslinasto zelena, isto kao AccessPage */
+    background-color: #A4C1AA;
     transition: 0.3s;
     cursor: pointer;
-    margin: 10px;
-}
-
-.page1-btn:hover {
-    background-color: #8EA995; /* Blago tamnija maslinasta */
-}
-
-/* Dugmad u istoj liniji */
-.buttons {
+    min-width: 220px; /* Ensures equal width */
+    max-width: 220px; /* Prevents growing */
+    height: 50px; /* Ensures consistent height */
+    text-align: center;
+    white-space: nowrap;
     display: flex;
-    gap: 15px; /* Razmak između dugmadi */
+    align-items: center;
+    justify-content: center;
 }
 
-/* Navigacija */
+/* Hover effects */
+.page1-btn:hover {
+    background-color: #8EA995;
+}
+
+/* Statistics button */
+.access-stats-btn {
+    background-color: #B9A394;
+}
+
+.access-stats-btn:hover {
+    background-color: #A18C7B;
+}
+
+/* Quit button */
+.access-quit-btn {
+    background-color: #C65F5F;
+}
+
+.access-quit-btn:hover {
+    background-color: #9B3939;
+}
+
+/* Fixed top navigation */
 .top-nav {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background: #D7D1C4; /* Svijetlo bež, isto kao AccessPage info bar */
+    background: #D7D1C4;
     padding: 15px 0;
     text-align: center;
     font-weight: bold;
     font-size: 20px;
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+    .access-page-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .page-info-box {
+        min-width: 160px; /* Manji box na manjim ekranima */
+    }
+
+    .page-info-box + .page-info-box {
+        margin-left: 0;
+        margin-top: 10px; /* Stack boxovi na manjim ekranima */
+    }
+
+    .access-btn {
+        min-width: 180px; /* Manji buttoni na mobilnim uređajima */
+    }
 }

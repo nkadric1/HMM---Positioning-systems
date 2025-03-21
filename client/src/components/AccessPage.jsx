@@ -28,9 +28,14 @@ function AccessPage() {
     return (
         <div>
             <div className="access-page-info">
-                <p className="from-inf"><strong>From:</strong> {previousPage}</p>
-                <p className="curr-inf"><strong>Current Page:</strong> Access Page</p>
-            </div>
+    <div className="page-info-box">
+        <strong>From: </strong> {previousPage}
+    </div>
+    <div className="page-info-box">
+        <strong>Current Page: </strong> Page 1
+    </div>
+</div>
+
 
             <div className="access-page-container">
                 <div className="groupall">

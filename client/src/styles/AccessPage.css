@@ -32,25 +32,37 @@ body {
     background-color: transparent; /* Transparentan donji kontejner */
     text-align: center;
     margin-top: -100px;
-
 }
 
-/* Info Section */
+/* Info Section - Box container */
 .access-page-info {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    width: 100%;
-    max-width: 1000px;
-    padding: 10px 20px;
-    color: #5A5148;
-    font-size: 16px;
-    font-weight: 500;
+    gap: 15px; /* Razmak između "From" i "Current Page" */
     position: absolute;
     top: 80px; 
     left: 50%;
     transform: translateX(-50%);
+}
+
+/* Box Styling for "From" and "Current Page" */
+.page-info-box {
+    background-color: #A4C1AA; /* Maslinasta zelena - isto kao dugmad */
+    color: white;
+    font-size: 16px;
+    padding: 10px 15px;
     border-radius: 8px;
+    text-align: center;
+    min-width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/* 🔥 Ensure Exactly 100px Space Between Boxes */
+.page-info-box + .page-info-box {
+    margin-left: 220px; /* ⚡ Precizan razmak između dva boxa */
 }
 
 /* Navigation Buttons */
@@ -64,16 +76,18 @@ body {
 
 /* Button Styles */
 .access-btn {
-    padding: 10px 15px;
+    padding: 12px 18px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     text-decoration: none;
     font-weight: bold;
     color: white;
     background-color: #A4C1AA; /* Maslinasta */
     transition: 0.3s;
     cursor: pointer;
-    width: 200px;
+    min-width: 220px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .access-btn:hover {
@@ -98,4 +112,21 @@ body {
 .access-quit-btn:hover {
     background-color: #9B3939;
     color: black;
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+    .access-page-info {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .page-info-box {
+        min-width: 160px; /* Manji box na manjim ekranima */
+    }
+
+    .access-btn {
+        min-width: 180px; /* Manji buttoni na mobilnim uređajima */
+    }
 }

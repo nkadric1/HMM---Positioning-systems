@@ -1,12 +1,11 @@
 import axios from "axios";
 import { Link, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
-
-import "../styles/Page3.css";  // Import CSS file
+import "../styles/Page3.css";  
 import HMM from "../../../server/models/HMM.js"
 
-const pages = ["AccessPage", "Page1", "Page2", "Page3", "Page4"];
-const hmm = new HMM(pages); // Initialize HMM with pages
+const pages = ["Access Page", "Page1", "Page2", "Page3", "Page4"];
+const hmm = new HMM(pages); 
 
 function Page3() {
     const location = useLocation();
@@ -20,7 +19,7 @@ function Page3() {
     }, []);
 
     const handleClick = (toIndex) => {
-        sessionStorage.setItem("previousPage", "Page3"); // ✅ set BEFORE navigating
+        sessionStorage.setItem("previousPage", "Page3");
         hmm.updateHMM(3, toIndex);
     };
 
@@ -29,15 +28,21 @@ function Page3() {
         sessionStorage.clear();
         navigate("/");
     };
+
     return (
         <div className="page-container">
-                       {/* Current Page Info (Top Right) */}
-                       <div className="access-page-info">
-            <p className="from-inf"><strong>From:</strong> {previousPage}</p>
-
-                <p className="curr-inf"><strong>Current Page:</strong>Page 3</p>
+            {/* ✅ Properly Aligned "From" and "Current Page" Boxes */}
+            <div className="access-page-info">
+                <div className="page-info-box">
+                    <strong>From:</strong> {previousPage}
+                </div>
+                <div className="page-info-box">
+                    <strong>Current Page:</strong> Page 3
+                </div>
             </div>
-            <div className="page3-card">  {/* Ovo osigurava da sadržaj bude u okviru */}
+
+            {/* ✅ Page Content */}
+            <div className="page3-card">  
                 <h2>Indoor Positioning Systems</h2>
                 <p>
                     <strong>Indoor positioning</strong> is used in <strong>hospitals, airports, and shopping malls</strong>, where 
@@ -49,16 +54,23 @@ function Page3() {
                     <li><strong>IMU Sensors:</strong> Tracking motion via accelerometers and gyroscopes.</li>
                 </ul>
 
+                {/* ✅ Aligned Buttons */}
                 <div className="nav-buttons">
-                    <Link to="/" className="page1-btn" onClick={() => handleClick(0)}>Go to Access Page</Link>
-                    <Link to="/page1" className="btn back-btn" onClick={() => handleClick(1)}>Go to Page 1</Link>
-                    <Link to="/page2" className="btn" onClick={() => handleClick(2)}>Back to HMM in Positioning</Link>
-                    <Link to="/page4" className="btn back-btn" onClick={() => handleClick(4)}>Next: Outdoor Positioning Systems</Link>
-                    <Link to="/statistics" className="access-btn access-stats-btn" onClick={() => {}}>View Statistics</Link>
-                    <button className="access-btn access-quit-btn" onClick={handleQuit}>Leave/Quit</button>
+    
+    <Link to="/" className="btn" onClick={() => handleClick(0)}>Access Page</Link>
+    <Link to="/page1" className="btn" onClick={() => handleClick(1)}>HMM Introduction</Link>
+    <Link to="/page2" className="btn" onClick={() => handleClick(2)}>HMM In Positioning</Link>
+    <Link to="/page4" className="btn" onClick={() => handleClick(4)}>Outdoor Positioning Systems</Link>
+    
+    {/* ✅ Statistics should be brown */}
+    <Link to="/statistics" className="stats-btn" onClick={() => {}}>View Statistics</Link>
+
+    {/* ✅ Quit button stays red */}
+    <button className="access-btn access-quit-btn" onClick={handleQuit}>Leave/Quit</button>
+</div>
                 </div>
             </div>
-        </div>
+    
     );
 }
 
