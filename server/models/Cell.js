@@ -3,18 +3,16 @@ import InterfaceCell from "./InterfaceCell.js";
 class Cell extends InterfaceCell {
     constructor() {
         super();
-        this.nb = 0; // Number of visits
-        this.previous = 0; // Tracks transitions to other pages
+        this.nb = 0; 
+        this.previous = 0; 
         this.next = 0;
     }
 
-    updateTransition(to) { //to is j column
+    updateTransition(to) { 
         console.log("transition is ", to)
         if (to) {
-            this.nb++;
-            
+            this.nb++;    
         }
-        
         console.log("number is ", this.nb)
 
     }

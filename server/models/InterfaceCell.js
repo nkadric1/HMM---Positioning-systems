@@ -6,11 +6,11 @@ class InterfaceCell {
     }
 
     updateTransition(from, to) {
-        throw new Error("Method 'updateTransition' must be implemented.");
+        throw new Error("Method must be implemented.");
     }
 
     calculateProbabilities() {
-        throw new Error("Method 'calculateProbabilities' must be implemented.");
+        throw new Error("Method must be implemented.");
     }
 }
 

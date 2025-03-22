@@ -8,7 +8,7 @@ function Statistics({ hmm }) {
 
     useEffect(() => {
         const updateMatrix = () => {
-            hmm.calculateProbabilities();  // Ensure probabilities are updated
+            hmm.calculateProbabilities();  
             setMatrix([...hmm.getMatrix()]);
         };
 

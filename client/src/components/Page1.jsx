@@ -1,14 +1,12 @@
-import axios from "axios";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import "../styles/Page1.css";  // Import CSS file
+import "../styles/Page1.css"; 
 import HMM from "../../../server/models/HMM.js"
 
 const pages = ["AccessPage", "Page1", "Page2", "Page3", "Page4"];
-const hmm = new HMM(pages); // Initialize HMM with pages
+const hmm = new HMM(pages); 
 
 function Page1() {
-    const location = useLocation();
     const navigate = useNavigate();
     const [previousPage, setPreviousPage] = useState("None");
 
@@ -32,7 +30,6 @@ function Page1() {
     return (
         
         <div className="page1-wrapper">
-                       {/* Current Page Info (Top Right) */}
             <div className="access-page-info">
     <div className="page-info-box">
         <strong>From: </strong>&nbsp;{previousPage}
