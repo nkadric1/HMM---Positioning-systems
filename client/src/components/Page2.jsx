@@ -35,16 +35,16 @@ function Page2() {
             {/* ✅ Corrected Page Info Section (Properly Positioned) */}
             <div className="access-page-info">
                 <div className="page-info-box">
-                    <strong>From: </strong> {previousPage}
+                    <strong>From: </strong>&nbsp;{previousPage}
                 </div>
                 <div className="page-info-box">
-                    <strong>Current Page: </strong> Page 2
+                    <strong>Current Page: </strong>&nbsp;Page 2
                 </div>
             </div>
 
             {/* ✅ Corrected Page 2 Content */}
             <div className="page2-card">
-                <h2>HMM in Positioning Systems</h2>
+                <h2 onClick={() => handleClick(2)}>HMM in Positioning Systems</h2>
                 <p>
                     <strong>Positioning systems</strong> determine a user's location based on 
                     <strong> sensor data, signal strength, and movement patterns</strong>. 

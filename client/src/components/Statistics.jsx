@@ -20,7 +20,7 @@ function Statistics({ hmm }) {
     const handleBack = () => {
         const prev = sessionStorage.getItem("previousPage");
         if (prev) {
-            if(prev=="AccessPage")
+            if(prev==="AccessPage")
             {
                 navigate(`/`);
             }

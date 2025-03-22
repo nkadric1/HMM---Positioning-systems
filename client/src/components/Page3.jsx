@@ -34,16 +34,16 @@ function Page3() {
             {/* ✅ Properly Aligned "From" and "Current Page" Boxes */}
             <div className="access-page-info">
                 <div className="page-info-box">
-                    <strong>From:</strong> {previousPage}
+                    <strong>From:</strong>&nbsp;{previousPage}
                 </div>
                 <div className="page-info-box">
-                    <strong>Current Page:</strong> Page 3
+                    <strong>Current Page:</strong>&nbsp;Page 3
                 </div>
             </div>
 
             {/* ✅ Page Content */}
             <div className="page3-card">  
-                <h2>Indoor Positioning Systems</h2>
+                <h2 onClick={() => handleClick(3)}>Indoor Positioning Systems</h2>
                 <p>
                     <strong>Indoor positioning</strong> is used in <strong>hospitals, airports, and shopping malls</strong>, where 
                     GPS is unreliable. Methods include:

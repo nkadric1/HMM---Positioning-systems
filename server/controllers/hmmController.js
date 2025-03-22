@@ -1,8 +1,7 @@
 import HMM from "../models/HMM.js";
 
-//const pages = ["AccessPage", "Page1", "Page2", "Page3", "Page4"];
+const pages = ["AccessPage", "Page1", "Page2", "Page3", "Page4"];
 
-const pages = ["Access Page", "Page1", "Page2", "Page3", "Page4", "Statistics"];
 const hmm = new HMM(pages);
 
 export const updateHMM = (req, res) => {
@@ -16,14 +15,18 @@ export const updateHMM = (req, res) => {
     }
 
     hmm.updateHMM(fromIndex, toIndex);
-    res.json({ message: "HMM updated successfully", matrix: hmm.getMatrix() });
+
+    return res.status(200).json({
+        message: `HMM updated: ${from} → ${to}`,
+        matrix: hmm.getMatrix()
+    });
 };
 
-
 export const getProbabilities = (req, res) => {
-    res.json(hmm.getProbabilities());
+    return res.status(200).json(hmm.getProbabilities());
 };
 
 export const getMatrix = (req, res) => {
-    res.json(hmm.getMatrix());
+    return res.status(200).json(hmm.getMatrix());
 };
+

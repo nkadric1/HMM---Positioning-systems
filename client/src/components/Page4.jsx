@@ -34,16 +34,16 @@ function Page4() {
             {/* ✅ Wrapper Ensuring 100px Gap */}
             <div className="access-page-info">
                 <div className="page-info-box">
-                    <strong>From:</strong> {previousPage}
+                    <strong>From:</strong>&nbsp;{previousPage}
                 </div>
                 <div className="page-info-box">
-                    <strong>Current Page:</strong> Page 4
+                    <strong>Current Page:</strong>&nbsp;Page 4
                 </div>
             </div>
 
             {/* ✅ Page Content */}
             <div className="page4-card">  
-                <h2>Outdoor Positioning Systems</h2>
+                <h2 onClick={() => handleClick(4)}>Outdoor Positioning Systems</h2>
                 <p>
                     <strong>Outdoor positioning</strong> relies on <strong>GPS, cellular networks, and satellite systems</strong>.
                     Common methods include:

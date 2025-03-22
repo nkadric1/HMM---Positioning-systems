@@ -13,11 +13,23 @@ function AccessPage() {
     const [previousPage, setPreviousPage] = useState("None");
 
     useEffect(() => {
+        const currentPage = "AccessPage";
         const storedPrevPage = sessionStorage.getItem("previousPage");
+    
         if (storedPrevPage) {
             setPreviousPage(storedPrevPage);
+    
+            if (storedPrevPage === currentPage) {
+                hmm.updateHMM(0, 0); 
+            }
         }
+    
+        setTimeout(() => {
+            sessionStorage.setItem("previousPage", currentPage);
+        }, 200);
     }, []);
+    
+    
 
     const handleQuit = () => {
         alert("You have left the system.");
@@ -28,26 +40,29 @@ function AccessPage() {
     return (
         <div>
             <div className="access-page-info">
-    <div className="page-info-box">
-        <strong>From: </strong> {previousPage}
-    </div>
-    <div className="page-info-box">
-        <strong>Current Page: </strong> Page 1
-    </div>
-</div>
-
+                <div className="page-info-box">
+                    <strong>From: </strong>&nbsp;{previousPage}
+                </div>
+                <div className="page-info-box">
+                    <strong>Current Page: </strong>&nbsp;Access Page
+                </div>
+            </div>
 
             <div className="access-page-container">
                 <div className="groupall">
-                    <h1 className="access-title">Access Page</h1>
+                    <h1 className="access-title" onClick={() => {
+                                sessionStorage.setItem("previousPage", "AccessPage");
+                                hmm.updateHMM(0, 0);
+                            }}>Access Page</h1>
 
                     <div className="access-nav-buttons">
                         <Link
                             to="/page1"
                             className="access-btn"
                             onClick={() => {
-                                sessionStorage.setItem("previousPage", "Access Page");
+                                sessionStorage.setItem("previousPage", "AccessPage");
                                 hmm.updateHMM(0, 1);
+                                
                             }}
                         >
                             Go to Page 1
@@ -57,7 +72,7 @@ function AccessPage() {
                             to="/page2"
                             className="access-btn"
                             onClick={() => {
-                                sessionStorage.setItem("previousPage", "Access Page");
+                                sessionStorage.setItem("previousPage", "AccessPage");
                                 hmm.updateHMM(0, 2);
                             }}
                         >
@@ -68,7 +83,7 @@ function AccessPage() {
                             to="/page3"
                             className="access-btn"
                             onClick={() => {
-                                sessionStorage.setItem("previousPage", "Access Page");
+                                sessionStorage.setItem("previousPage", "AccessPage");
                                 hmm.updateHMM(0, 3);
                             }}
                         >
@@ -79,7 +94,7 @@ function AccessPage() {
                             to="/page4"
                             className="access-btn"
                             onClick={() => {
-                                sessionStorage.setItem("previousPage", "Access Page");
+                                sessionStorage.setItem("previousPage", "AccessPage");
                                 hmm.updateHMM(0, 4);
                             }}
                         >
@@ -89,10 +104,7 @@ function AccessPage() {
                         <Link
                             to="/statistics"
                             className="access-btn access-stats-btn"
-                            onClick={() => {
-                                sessionStorage.setItem("previousPage", "Access Page");
-                                hmm.updateHMM(0, 5);
-                            }}
+                            onClick={() => {}}
                         >
                             View Statistics
                         </Link>

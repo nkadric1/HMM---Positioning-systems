@@ -35,15 +35,15 @@ function Page1() {
                        {/* Current Page Info (Top Right) */}
             <div className="access-page-info">
     <div className="page-info-box">
-        <strong>From: </strong> {previousPage}
+        <strong>From: </strong>&nbsp;{previousPage}
     </div>
     <div className="page-info-box">
-        <strong>Current Page: </strong> Page 1
+        <strong>Current Page: </strong>&nbsp;Page 1
     </div>
 </div>
 
             <div className="page1-container">
-                <h1>Introduction to Hidden Markov Models</h1>
+                <h1 onClick={() => handleClick(1)}>Introduction to Hidden Markov Models</h1>
                 <p>HMMs are used in various fields like speech recognition, positioning, and more.</p>
                 <div className="buttons">
                     <Link to="/" className="page1-btn" onClick={() => handleClick(0)}>Access page</Link>

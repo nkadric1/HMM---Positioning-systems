@@ -80,3 +80,7 @@ body {
 .statistics-table tbody tr:nth-child(even) td {
     background-color: #ECE5DB;
 }
+
+.nav-buttons{
+    margin-top: 15px;
+}

@@ -54,7 +54,8 @@ body {
     padding: 10px 15px;
     border-radius: 8px;
     text-align: center;
-    min-width: 180px;
+    min-width: 200px;
+    width: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
