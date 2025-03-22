@@ -1,11 +1,9 @@
-/* Reset styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Page background */
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: #E9E3D8;
@@ -16,7 +14,6 @@ body {
     min-height: 100vh;
 }
 
-/* Page container */
 .page-container {
     display: flex;
     flex-direction: column;
@@ -26,7 +23,6 @@ body {
     width: 100%;
 }
 
-/* Info Section - Box container */
 .access-page-info {
     display: flex;
     justify-content: center;
@@ -37,7 +33,6 @@ body {
     transform: translateX(-50%);
 }
 
-/* Box Styling for "From" and "Current Page" */
 .page-info-box {
     background-color: #A4C1AA;
     color: white;
@@ -52,12 +47,10 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Ensure Exactly 100px Space Between Boxes */
 .page-info-box + .page-info-box {
     margin-left: 220px;
 }
 
-/* Centering content card */
 .page3-card {
     background: white;
     border-radius: 10px;
@@ -73,7 +66,6 @@ body {
     margin-top: 120px;
 }
 
-/* Title styling */
 .page3-card h2 {
     font-size: 22px;
     color: #5A5148;
@@ -81,7 +73,6 @@ body {
     text-align: center;
 }
 
-/* Paragraph text */
 .page3-card p {
     font-size: 14px;
     color: #4D4238;
@@ -89,7 +80,6 @@ body {
     text-align: center;
 }
 
-/* List styling */
 .page3-card ul {
     list-style: none;
     padding: 0;
@@ -103,7 +93,6 @@ body {
     text-align: center;
 }
 
-/* ✅ Uniform navigation button container */
 .nav-buttons {
     display: flex;
     flex-wrap: wrap;
@@ -113,7 +102,6 @@ body {
     margin: 0 auto;
 }
 
-/* ✅ All buttons are the same size */
 .btn, 
 .back-btn,
 .stats-btn,
@@ -128,7 +116,7 @@ body {
     background-color: #A4C1AA;
     transition: 0.3s;
     cursor: pointer;
-    min-width: 220px;  /* ✅ Osigurava istu širinu */
+    min-width: 220px;  
     max-width: 220px;
     height: 50px;
     text-align: center;
@@ -138,13 +126,11 @@ body {
     justify-content: center;
 }
 
-/* ✅ Ensuring uniform button hover */
 .btn:hover, 
 .back-btn:hover {
     background-color: #8EA995;
 }
 
-/* ✅ Statistics button - Brown with white text */
 .stats-btn {
     background-color: #B9A394 !important;
     color: white !important;
@@ -154,7 +140,6 @@ body {
     background-color: #A18C7B !important;
 }
 
-/* ✅ Quit button - Red with white text */
 .access-quit-btn {
     background-color: #C65F5F;
     color: white !important;
@@ -164,7 +149,6 @@ body {
     background-color: #9B3939;
 }
 
-/* ✅ Fix button alignment in last row */
 .special-buttons {
     display: flex;
     justify-content: center;
@@ -172,7 +156,6 @@ body {
     gap: 10px;
 }
 
-/* ✅ Ensure View Statistics & Leave/Quit align properly */
 .special-buttons .stats-btn,
 .special-buttons .access-quit-btn {
     min-width: 220px;
@@ -183,7 +166,6 @@ body {
     justify-content: center;
 }
 
-/* ✅ Responsive Fix */
 @media (max-width: 768px) {
     .access-page-info {
         flex-direction: column;

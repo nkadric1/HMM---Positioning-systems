@@ -8,7 +8,7 @@ function Statistics({ hmm }) {
 
     useEffect(() => {
         const updateMatrix = () => {
-            hmm.calculateProbabilities();  
+            hmm.calculateProbabilities();
             setMatrix([...hmm.getMatrix()]);
         };
 
@@ -20,11 +20,10 @@ function Statistics({ hmm }) {
     const handleBack = () => {
         const prev = sessionStorage.getItem("previousPage");
         if (prev) {
-            if(prev==="AccessPage")
-            {
+            if (prev === "AccessPage") {
                 navigate(`/`);
             }
-            else{
+            else {
                 navigate(`/${prev.toLowerCase().replace(" ", "")}`);
             }
         }

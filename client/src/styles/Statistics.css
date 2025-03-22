@@ -1,20 +1,18 @@
-/* Resetovanje margina i paddinga */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Osnovni stil za telo stranice */
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #E9E3D8; /* Ista pozadina kao ostale stranice */
+    background-color: #E9E3D8; 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     min-height: 100vh;
-    overflow-x: hidden; /* Sprečava horizontalni scroll */
+    overflow-x: hidden; 
 }
 
 .statistics-container {
@@ -22,17 +20,16 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 100%;  /* Širina card-a */
-    max-width: 1200px;  /* Maksimalna širina */
-    padding: 20px;  /* Više prostora unutar card-a */
-    margin-top: 100px; /* Spuštamo ispod glavnog naslova */
-    max-height: 90vh; /* Ograničavamo visinu card-a */
-    overflow: auto; /* Omogućavamo skrolovanje unutar card-a */
+    width: 100%;  
+    max-width: 1200px;  
+    padding: 20px;  
+    margin-top: 100px; 
+    max-height: 90vh; 
+    overflow: auto; 
     display: flex;
     flex-direction: column;
 }
 
-/* Stil za naslov */
 .statistics-container h2 {
     font-size: 28px;
     font-weight: bold;
@@ -40,15 +37,13 @@ body {
     margin-bottom: 15px;
 }
 
-/* Stil za tabelu */
 .statistics-table {
     width: 100%;
     border-collapse: collapse;
 }
 
-/* Header tabele */
 .statistics-table thead th {
-    background-color: #A4C1AA; /* Maslinasto-zelena */
+    background-color: #A4C1AA; 
     color: white;
     padding: 12px;
     text-align: center;
@@ -56,9 +51,8 @@ body {
     font-size: 16px;
 }
 
-/* Prvi stupac */
 .row-header {
-    background-color: #B9A394; /* Svetlo bež */
+    background-color: #B9A394; 
     font-weight: bold;
     text-align: center;
     padding: 12px;
@@ -66,17 +60,15 @@ body {
     font-size: 16px;
 }
 
-/* Ćelije tabele */
 .statistics-table td {
     padding: 12px;
     text-align: center;
     border: 1px solid #ddd;
     background-color: #F5F1EB;
-    min-width: 140px; /* Širina ćelija */
+    min-width: 140px; 
     font-size: 15px;
 }
 
-/* Alternativna pozadina za redove */
 .statistics-table tbody tr:nth-child(even) td {
     background-color: #ECE5DB;
 }

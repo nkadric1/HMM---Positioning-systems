@@ -2,14 +2,13 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: rgba(233, 226, 213, 0.482); /* Glavna pozadina */
+    background-color: rgba(233, 226, 213, 0.482); 
     margin: 0;
     padding: 0;
 }
 
-/* Header Container */
 .top-nav {
-    background-color: #D6CFC4; /* Boja headera */
+    background-color: #D6CFC4; 
     width: 100%;
     padding: 15px 0;
     text-align: center;
@@ -21,7 +20,6 @@ body {
     left: 0;
 }
 
-/* Full-screen layout */
 .access-page-container {
     width: 100vw;
     height: 100vh;
@@ -29,26 +27,24 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: transparent; /* Transparentan donji kontejner */
+    background-color: transparent; 
     text-align: center;
     margin-top: -100px;
 }
 
-/* Info Section - Box container */
 .access-page-info {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px; /* Razmak između "From" i "Current Page" */
+    gap: 15px; 
     position: absolute;
     top: 80px; 
     left: 50%;
     transform: translateX(-50%);
 }
 
-/* Box Styling for "From" and "Current Page" */
 .page-info-box {
-    background-color: #A4C1AA; /* Maslinasta zelena - isto kao dugmad */
+    background-color: #A4C1AA; 
     color: white;
     font-size: 16px;
     padding: 10px 15px;
@@ -61,12 +57,10 @@ body {
     justify-content: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-/* 🔥 Ensure Exactly 100px Space Between Boxes */
 .page-info-box + .page-info-box {
-    margin-left: 220px; /* ⚡ Precizan razmak između dva boxa */
+    margin-left: 220px; 
 }
 
-/* Navigation Buttons */
 .access-nav-buttons {
     display: flex;
     flex-direction: column;
@@ -75,7 +69,6 @@ body {
     margin-top: 20px;
 }
 
-/* Button Styles */
 .access-btn {
     padding: 12px 18px;
     border: none;
@@ -83,7 +76,7 @@ body {
     text-decoration: none;
     font-weight: bold;
     color: white;
-    background-color: #A4C1AA; /* Maslinasta */
+    background-color: #A4C1AA;
     transition: 0.3s;
     cursor: pointer;
     min-width: 220px;
@@ -92,12 +85,11 @@ body {
 }
 
 .access-btn:hover {
-    background-color: #8EA995; /* Tamnija zelena */
+    background-color: #8EA995; 
 }
 
-/* Statistics Button */
 .access-stats-btn {
-    background-color: #B9A394; /* Svijetlo bež */
+    background-color: #B9A394; 
 }
 
 .access-stats-btn:hover {
@@ -105,7 +97,6 @@ body {
     color: white;
 }
 
-/* Quit Button */
 .access-quit-btn {
     background-color: #C65F5F;
 }
@@ -115,7 +106,6 @@ body {
     color: black;
 }
 
-/* Responsive Fix */
 @media (max-width: 768px) {
     .access-page-info {
         flex-direction: column;
@@ -124,10 +114,10 @@ body {
     }
 
     .page-info-box {
-        min-width: 160px; /* Manji box na manjim ekranima */
+        min-width: 160px; 
     }
 
     .access-btn {
-        min-width: 180px; /* Manji buttoni na mobilnim uređajima */
+        min-width: 180px; 
     }
 }

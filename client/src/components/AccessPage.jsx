@@ -13,21 +13,21 @@ function AccessPage() {
     useEffect(() => {
         const currentPage = "AccessPage";
         const storedPrevPage = sessionStorage.getItem("previousPage");
-    
+
         if (storedPrevPage) {
             setPreviousPage(storedPrevPage);
-    
+
             if (storedPrevPage === currentPage) {
-                hmm.updateHMM(0, 0); 
+                hmm.updateHMM(0, 0);
             }
         }
-    
+
         setTimeout(() => {
             sessionStorage.setItem("previousPage", currentPage);
         }, 200);
     }, []);
-    
-    
+
+
 
     const handleQuit = () => {
         alert("You have left the system.");
@@ -49,9 +49,9 @@ function AccessPage() {
             <div className="access-page-container">
                 <div className="groupall">
                     <h1 className="access-title" onClick={() => {
-                                sessionStorage.setItem("previousPage", "AccessPage");
-                                hmm.updateHMM(0, 0);
-                            }}>Access Page</h1>
+                        sessionStorage.setItem("previousPage", "AccessPage");
+                        hmm.updateHMM(0, 0);
+                    }}>Access Page</h1>
 
                     <div className="access-nav-buttons">
                         <Link
@@ -60,7 +60,7 @@ function AccessPage() {
                             onClick={() => {
                                 sessionStorage.setItem("previousPage", "AccessPage");
                                 hmm.updateHMM(0, 1);
-                                
+
                             }}
                         >
                             Go to Page 1
@@ -102,7 +102,7 @@ function AccessPage() {
                         <Link
                             to="/statistics"
                             className="access-btn access-stats-btn"
-                            onClick={() => {}}
+                            onClick={() => { }}
                         >
                             View Statistics
                         </Link>

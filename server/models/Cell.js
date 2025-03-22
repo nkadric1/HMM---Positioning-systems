@@ -3,15 +3,15 @@ import InterfaceCell from "./InterfaceCell.js";
 class Cell extends InterfaceCell {
     constructor() {
         super();
-        this.nb = 0; 
-        this.previous = 0; 
+        this.nb = 0;
+        this.previous = 0;
         this.next = 0;
     }
 
-    updateTransition(to) { 
+    updateTransition(to) {
         console.log("transition is ", to)
         if (to) {
-            this.nb++;    
+            this.nb++;
         }
         console.log("number is ", this.nb)
 

@@ -1,10 +1,10 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import "../styles/Page4.css";  
+import "../styles/Page4.css";
 import HMM from "../../../server/models/HMM.js"
 
 const pages = ["Access Page", "Page1", "Page2", "Page3", "Page4"];
-const hmm = new HMM(pages); 
+const hmm = new HMM(pages);
 
 function Page4() {
     const navigate = useNavigate();
@@ -39,7 +39,7 @@ function Page4() {
                 </div>
             </div>
 
-            <div className="page4-card">  
+            <div className="page4-card">
                 <h2 onClick={() => handleClick(4)}>Outdoor Positioning Systems</h2>
                 <p>
                     <strong>Outdoor positioning</strong> relies on <strong>GPS, cellular networks, and satellite systems</strong>.
@@ -56,16 +56,16 @@ function Page4() {
                 </p>
 
                 <div className="nav-buttons">
-    
-    <Link to="/" className="btn" onClick={() => handleClick(0)}>Access Page</Link>
-    <Link to="/page1" className="btn" onClick={() => handleClick(1)}>HMM Introduction</Link>
-    <Link to="/page2" className="btn" onClick={() => handleClick(2)}>HMM In Positioning</Link>
-    <Link to="/page3" className="btn" onClick={() => handleClick(3)}>Indoor Positioning Systems</Link>
-    
-    <Link to="/statistics" className="stats-btn" onClick={() => {}}>View Statistics</Link>
 
-    <button className="access-btn access-quit-btn" onClick={handleQuit}>Leave/Quit</button>
-</div>
+                    <Link to="/" className="btn" onClick={() => handleClick(0)}>Access Page</Link>
+                    <Link to="/page1" className="btn" onClick={() => handleClick(1)}>HMM Introduction</Link>
+                    <Link to="/page2" className="btn" onClick={() => handleClick(2)}>HMM In Positioning</Link>
+                    <Link to="/page3" className="btn" onClick={() => handleClick(3)}>Indoor Positioning Systems</Link>
+
+                    <Link to="/statistics" className="stats-btn" onClick={() => { }}>View Statistics</Link>
+
+                    <button className="access-btn access-quit-btn" onClick={handleQuit}>Leave/Quit</button>
+                </div>
             </div>
         </div>
     );

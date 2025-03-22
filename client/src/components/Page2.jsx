@@ -18,7 +18,7 @@ function Page2() {
     }, []);
 
     const handleClick = (toIndex) => {
-        sessionStorage.setItem("previousPage", "Page2"); 
+        sessionStorage.setItem("previousPage", "Page2");
         hmm.updateHMM(2, toIndex);
     };
 
@@ -42,8 +42,8 @@ function Page2() {
             <div className="page2-card">
                 <h2 onClick={() => handleClick(2)}>HMM in Positioning Systems</h2>
                 <p>
-                    <strong>Positioning systems</strong> determine a user's location based on 
-                    <strong> sensor data, signal strength, and movement patterns</strong>. 
+                    <strong>Positioning systems</strong> determine a user's location based on
+                    <strong> sensor data, signal strength, and movement patterns</strong>.
                     HMMs enhance <strong>indoor positioning</strong> where GPS is unreliable.
                 </p>
                 <p>HMMs are used in:</p>
@@ -54,15 +54,15 @@ function Page2() {
                 </ul>
 
                 <div className="nav-buttons">
-    <Link to="/" className="btn" onClick={() => handleClick(0)}>Access Page</Link>
-    <Link to="/page1" className="btn" onClick={() => handleClick(1)}>HMM Introduction</Link>
-    <Link to="/page3" className="btn" onClick={() => handleClick(3)}>Indoor Positioning Systems</Link>
-    <Link to="/page4" className="btn" onClick={() => handleClick(4)}>Outdoor Positioning Systems</Link>
-    
-    <Link to="/statistics" className="stats-btn" onClick={() => {}}>View Statistics</Link>
+                    <Link to="/" className="btn" onClick={() => handleClick(0)}>Access Page</Link>
+                    <Link to="/page1" className="btn" onClick={() => handleClick(1)}>HMM Introduction</Link>
+                    <Link to="/page3" className="btn" onClick={() => handleClick(3)}>Indoor Positioning Systems</Link>
+                    <Link to="/page4" className="btn" onClick={() => handleClick(4)}>Outdoor Positioning Systems</Link>
 
-    <button className="access-btn access-quit-btn" onClick={handleQuit}>Leave/Quit</button>
-</div>
+                    <Link to="/statistics" className="stats-btn" onClick={() => { }}>View Statistics</Link>
+
+                    <button className="access-btn access-quit-btn" onClick={handleQuit}>Leave/Quit</button>
+                </div>
 
             </div>
         </div>
