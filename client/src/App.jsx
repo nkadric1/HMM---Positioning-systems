@@ -1,7 +1,5 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
 import "./App.css";
-import { BrowserRouter as Router, Route, Routes, Link, useLocation } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import AccessPage from "./components/AccessPage";
 import Page1 from "./components/Page1";
 import Page2 from "./components/Page2";
@@ -13,15 +11,12 @@ import HMM from "../../server/models/HMM.js";
 const pages = ["Access Page", "Page1", "Page2", "Page3", "Page4", "Statistics"];
 const hmm = new HMM(pages);
 function Navigation() {
-    const location = useLocation();
     return (
         <nav className="top-nav">
             <h1>Hidden Markov Model Navigation</h1>
-          {/* <p><strong>Current Page:</strong> {location.pathname.replace("/", "") || "Access Page"}</p> */}
         </nav>
     );
 }
-
 
 function App() {
     return (

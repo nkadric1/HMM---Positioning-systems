@@ -10,7 +10,6 @@ h1{
   font-size: 36px;
 }
 
-/* Fixed Navigation */
 .top-nav {
     background-color: #D6CFC4;
     width: 100%;
@@ -24,7 +23,6 @@ h1{
     z-index: 1000;
 }
 
-/* Title */
 .access-title {
     font-size: 32px;
     font-weight: bold;
@@ -33,12 +31,10 @@ h1{
     text-align: center;
 }
 
-/* Prevent scrolling */
 html, body {
     overflow: hidden;
 }
 
-/* Navigation Buttons */
 .access-nav-buttons {
     display: flex;
     flex-direction: column;
@@ -47,7 +43,6 @@ html, body {
     margin-top: 20px;
 }
 
-/* Buttons */
 .access-btn {
     padding: 10px 15px;
     border: none;
@@ -65,7 +60,6 @@ html, body {
     background-color: #8EA995;
 }
 
-/* Statistics Button */
 .access-stats-btn {
     background-color: #B9A394;
 }
@@ -75,7 +69,6 @@ html, body {
     color: white;
 }
 
-/* Quit Button */
 .access-quit-btn {
     background-color: #C65F5F;
 }

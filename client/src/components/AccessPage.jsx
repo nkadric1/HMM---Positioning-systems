@@ -1,5 +1,4 @@
-import axios from "axios";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "../styles/AccessPage.css";
 import HMM from "../../../server/models/HMM.js";
@@ -8,7 +7,6 @@ const pages = ["AccessPage", "Page1", "Page2", "Page3", "Page4"];
 const hmm = new HMM(pages);
 
 function AccessPage() {
-    const location = useLocation();
     const navigate = useNavigate();
     const [previousPage, setPreviousPage] = useState("None");
 
