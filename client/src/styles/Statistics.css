@@ -1,78 +1,78 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #E9E3D8; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    min-height: 100vh;
-    overflow-x: hidden; 
+  font-family: "Montserrat", sans-serif;
+  background-color: #e9e3d8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .statistics-container {
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 100%;  
-    max-width: 1200px;  
-    padding: 20px;  
-    margin-top: 100px; 
-    max-height: 90vh; 
-    overflow: auto; 
-    display: flex;
-    flex-direction: column;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  margin-top: 100px;
+  max-height: 90vh;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .statistics-container h2 {
-    font-size: 28px;
-    font-weight: bold;
-    color: #5A5148;
-    margin-bottom: 15px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #5a5148;
+  margin-bottom: 15px;
 }
 
 .statistics-table {
-    width: 100%;
-    border-collapse: collapse;
+  width: 100%;
+  border-collapse: collapse;
 }
 
 .statistics-table thead th {
-    background-color: #A4C1AA; 
-    color: white;
-    padding: 12px;
-    text-align: center;
-    border: 1px solid #ddd;
-    font-size: 16px;
+  background-color: #a4c1aa;
+  color: white;
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #ddd;
+  font-size: 16px;
 }
 
 .row-header {
-    background-color: #B9A394; 
-    font-weight: bold;
-    text-align: center;
-    padding: 12px;
-    border: 1px solid #ddd;
-    font-size: 16px;
+  background-color: #b9a394;
+  font-weight: bold;
+  text-align: center;
+  padding: 12px;
+  border: 1px solid #ddd;
+  font-size: 16px;
 }
 
 .statistics-table td {
-    padding: 12px;
-    text-align: center;
-    border: 1px solid #ddd;
-    background-color: #F5F1EB;
-    min-width: 140px; 
-    font-size: 15px;
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #ddd;
+  background-color: #f5f1eb;
+  min-width: 140px;
+  font-size: 15px;
 }
 
 .statistics-table tbody tr:nth-child(even) td {
-    background-color: #ECE5DB;
+  background-color: #ece5db;
 }
 
-.nav-buttons{
-    margin-top: 15px;
+.nav-buttons {
+  margin-top: 15px;
 }

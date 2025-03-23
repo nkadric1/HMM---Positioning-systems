@@ -1,167 +1,166 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #E9E3D8;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  background-color: #e9e3d8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
 }
 
 .page1-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: calc(100vh - 100px);
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 100px);
+  width: 100%;
 }
 
 .access-page-info {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 80px; 
-    left: 50%;
-    transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .page-info-box {
-    background-color: #A4C1AA; 
-    color: white;
-    font-weight: bold;
-    font-size: 14px;
-    padding: 10px 20px;
-    border-radius: 8px;
-    text-align: center;
-    min-width: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #a4c1aa;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-align: center;
+  min-width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .page-info-box + .page-info-box {
-    margin-left: 200px; 
+  margin-left: 200px;
 }
 
 .page1-container {
-    margin-top: 50px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    max-width: 600px;
-    width: 90%;
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 50px;
+  margin-top: 50px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 600px;
+  width: 90%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
 }
 
-
 .page1-container h1 {
-    font-size: 22px;
-    font-weight: bold;
-    color: #5A5148;
-    margin-bottom: 15px;
-    text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  color: #5a5148;
+  margin-bottom: 15px;
+  text-align: center;
 }
 
 .page1-container p {
-    font-size: 14px;
-    color: #4D4238;
-    margin-bottom: 20px;
+  font-size: 14px;
+  color: #4d4238;
+  margin-bottom: 20px;
 }
 
 .buttons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    max-width: 500px;
-    margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
-.page1-btn, 
+.page1-btn,
 .access-btn {
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 14px;
-    color: white;
-    background-color: #A4C1AA;
-    transition: 0.3s;
-    cursor: pointer;
-    min-width: 220px; 
-    max-width: 220px; 
-    height: 50px; 
-    text-align: center;
-    white-space: nowrap;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  color: white;
+  background-color: #a4c1aa;
+  transition: 0.3s;
+  cursor: pointer;
+  min-width: 220px;
+  max-width: 220px;
+  height: 50px;
+  text-align: center;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .page1-btn:hover {
-    background-color: #8EA995;
+  background-color: #8ea995;
 }
 
 .access-stats-btn {
-    background-color: #B9A394;
+  background-color: #b9a394;
 }
 
 .access-stats-btn:hover {
-    background-color: #A18C7B;
+  background-color: #a18c7b;
 }
 
 .access-quit-btn {
-    background-color: #C65F5F;
+  background-color: #c65f5f;
 }
 
 .access-quit-btn:hover {
-    background-color: #9B3939;
+  background-color: #9b3939;
 }
 
 .top-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: #D7D1C4;
-    padding: 15px 0;
-    text-align: center;
-    font-weight: bold;
-    font-size: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #d7d1c4;
+  padding: 15px 0;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 @media (max-width: 768px) {
-    .access-page-info {
-        flex-direction: column;
-        align-items: center;
-    }
+  .access-page-info {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .page-info-box {
-        min-width: 160px; 
-    }
+  .page-info-box {
+    min-width: 160px;
+  }
 
-    .page-info-box + .page-info-box {
-        margin-left: 0;
-        margin-top: 10px; 
-    }
+  .page-info-box + .page-info-box {
+    margin-left: 0;
+    margin-top: 10px;
+  }
 
-    .access-btn {
-        min-width: 180px; 
-    }
+  .access-btn {
+    min-width: 180px;
+  }
 }

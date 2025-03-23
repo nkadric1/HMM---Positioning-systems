@@ -1,123 +1,123 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: rgba(233, 226, 213, 0.482); 
-    margin: 0;
-    padding: 0;
+  font-family: "Montserrat", sans-serif;
+  background-color: rgba(233, 226, 213, 0.482);
+  margin: 0;
+  padding: 0;
 }
 
 .top-nav {
-    background-color: #D6CFC4; 
-    width: 100%;
-    padding: 15px 0;
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-    color: #5A5148; 
-    position: fixed;
-    top: 0;
-    left: 0;
+  background-color: #d6cfc4;
+  width: 100%;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #5a5148;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 .access-page-container {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: transparent; 
-    text-align: center;
-    margin-top: -100px;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  text-align: center;
+  margin-top: -100px;
 }
 
 .access-page-info {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px; 
-    position: absolute;
-    top: 80px; 
-    left: 50%;
-    transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .page-info-box {
-    background-color: #A4C1AA; 
-    color: white;
-    font-size: 16px;
-    padding: 10px 15px;
-    border-radius: 8px;
-    text-align: center;
-    min-width: 200px;
-    width: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #a4c1aa;
+  color: white;
+  font-size: 16px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-align: center;
+  min-width: 200px;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .page-info-box + .page-info-box {
-    margin-left: 220px; 
+  margin-left: 220px;
 }
 
 .access-nav-buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
 }
 
 .access-btn {
-    padding: 12px 18px;
-    border: none;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    color: white;
-    background-color: #A4C1AA;
-    transition: 0.3s;
-    cursor: pointer;
-    min-width: 220px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  background-color: #a4c1aa;
+  transition: 0.3s;
+  cursor: pointer;
+  min-width: 220px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .access-btn:hover {
-    background-color: #8EA995; 
+  background-color: #8ea995;
 }
 
 .access-stats-btn {
-    background-color: #B9A394; 
+  background-color: #b9a394;
 }
 
 .access-stats-btn:hover {
-    background-color: #A18C7B;
-    color: white;
+  background-color: #a18c7b;
+  color: white;
 }
 
 .access-quit-btn {
-    background-color: #C65F5F;
+  background-color: #c65f5f;
 }
 
 .access-quit-btn:hover {
-    background-color: #9B3939;
-    color: black;
+  background-color: #9b3939;
+  color: black;
 }
 
 @media (max-width: 768px) {
-    .access-page-info {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
+  .access-page-info {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
 
-    .page-info-box {
-        min-width: 160px; 
-    }
+  .page-info-box {
+    min-width: 160px;
+  }
 
-    .access-btn {
-        min-width: 180px; 
-    }
+  .access-btn {
+    min-width: 180px;
+  }
 }

@@ -1,29 +1,35 @@
 import InterfaceCell from "./InterfaceCell.js";
 
 class Cell extends InterfaceCell {
-    constructor() {
-        super();
-        this.nb = 0;
-        this.previous = 0;
-        this.next = 0;
-    }
+  constructor() {
+    super();
+    this.nb = 0;
+    this.previous = 0;
+    this.next = 0;
+  }
 
-    updateTransition(to) {
-        console.log("transition is ", to)
-        if (to) {
-            this.nb++;
-        }
-        console.log("number is ", this.nb)
-
+  updateTransition(to) {
+    console.log("transition is ", to);
+    if (to) {
+      this.nb++;
     }
+    console.log("number is ", this.nb);
+  }
 
-    calculateProbabilities() {
-        let probabilities = {};
-        for (let page in this.transitions) {
-            probabilities[page] = (this.transitions[page] / this.nb).toFixed(2);
-        }
-        return probabilities;
+  calculateProbabilities(sum_row, sum_column) {
+    if (sum_row > 0) {
+      this.previous = this.nb / sum_row;
+    } else {
+      this.previous = 0;
     }
+  
+    if (sum_column > 0) {
+      this.next = this.nb / sum_column;
+    } else {
+      this.next = 0;
+    }
+  }
+  
 }
 
 export default Cell;

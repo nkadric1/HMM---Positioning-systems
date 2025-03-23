@@ -8,5 +8,5 @@ app.use(express.json());
 app.use("/hmm", hmmRoutes);
 
 app.listen(8080, () => {
-    console.log("Server running on port 8080");
+  console.log("Server running on port 8080");
 });

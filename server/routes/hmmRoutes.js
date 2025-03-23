@@ -1,5 +1,9 @@
 import express from "express";
-import { updateHMM, getProbabilities, getMatrix } from "../controllers/hmmController.js";
+import {
+  updateHMM,
+  getProbabilities,
+  getMatrix,
+} from "../controllers/hmmController.js";
 
 const router = express.Router();
 
