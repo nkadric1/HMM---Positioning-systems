@@ -121,3 +121,19 @@ body {
     min-width: 180px;
   }
 }
+.page-title {
+  text-decoration: underline;
+  font-weight: bold;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #5A5148;
+  transition: color 0.2s;
+}
+
+.page-title:hover {
+  color: #7c6f60;
+  transform: translateX(5px); 
+
+}

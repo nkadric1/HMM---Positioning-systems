@@ -9,11 +9,9 @@ class Cell extends InterfaceCell {
   }
 
   updateTransition(to) {
-    console.log("transition is ", to);
     if (to) {
       this.nb++;
     }
-    console.log("number is ", this.nb);
   }
 
   calculateProbabilities(sum_row, sum_column) {

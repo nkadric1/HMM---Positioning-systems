@@ -40,7 +40,7 @@ function Page4() {
       </div>
 
       <div className="page4-card">
-        <h2 onClick={() => handleClick(4)}>
+        <h2 className="page-title" onClick={() => handleClick(4)}>
           Outdoor Positioning Systems (Page 4)
         </h2>
         <p>

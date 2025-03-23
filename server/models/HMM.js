@@ -25,13 +25,11 @@ class HMM extends InterfaceHMM {
   }
 
   updateHMM(from, to) {
-    console.log("from u funkciji i to u funkciji", from, to);
     this.transitionMatrix[from][to].updateTransition(to);
 
     this.sums_rows[from] += 1;
     this.sums_columns[to] += 1;
     this.calculateProbabilities();
-    console.log("Updated Transition Matrix:");
     this.printMatrix();
   }
 
@@ -52,13 +50,10 @@ class HMM extends InterfaceHMM {
   }
 
   printMatrix() {
-    console.log("\nTransition Matrix:");
-
     let header = "            ";
     for (let j = 0; j < this.pages.length; j++) {
       header += `${this.pages[j].padEnd(28)} `;
     }
-    console.log(header);
 
     for (let i = 0; i < this.pages.length; i++) {
       let rowStr = `From ${this.pages[i].padEnd(8)} (sum_row=${
@@ -72,14 +67,12 @@ class HMM extends InterfaceHMM {
         )}, next=${cell.next.toFixed(2)}]`;
       }
 
-      console.log(rowStr);
     }
 
     let sumStr = "\nsum_column:  ";
     for (let j = 0; j < this.pages.length; j++) {
       sumStr += `${String(this.sums_columns[j] ?? 0).padEnd(28)} `;
     }
-    console.log(sumStr);
   }
 
   getRowSums() {
