@@ -6,8 +6,6 @@ import HMM from "../../../server/models/HMM.js";
 const pages = ["AccessPage", "Page1", "Page2", "Page3", "Page4"];
 const hmm = new HMM(pages);
 
-const getPageIndex = (pageName) => pages.indexOf(pageName);
-
 function AccessPage() {
   const navigate = useNavigate();
   const [previousPage, setPreviousPage] = useState("None");
@@ -18,7 +16,6 @@ function AccessPage() {
 
     if (storedPrevPage && storedPrevPage !== currentPage) {
       setPreviousPage(storedPrevPage);
-      hmm.updateHMM(getPageIndex(storedPrevPage), getPageIndex(currentPage));
     }
 
     setTimeout(() => {
@@ -26,6 +23,10 @@ function AccessPage() {
     }, 200);
   }, []);
 
+ const handleClick = (toIndex)=>{
+  sessionStorage.setItem("previousPage", "AccessPage");
+  hmm.updateHMM(0, toIndex);
+ };
   const handleQuit = () => {
     alert("You have left the system.");
     sessionStorage.clear();
@@ -45,19 +46,13 @@ function AccessPage() {
 
       <div className="access-page-container">
         <div className="groupall">
-          <h1 className="access-title page-title"  onClick={() => {
-                sessionStorage.setItem("previousPage", "AccessPage");
-                hmm.updateHMM(getPageIndex("AccessPage"), getPageIndex("AccessPage"));
-              }}>Access Page</h1>
+          <h1 className="access-title page-title"  onClick={() => handleClick(0)}>Access Page</h1>
 
           <div className="access-nav-buttons">
             <Link
               to="/page1"
               className="access-btn"
-              onClick={() => {
-                sessionStorage.setItem("previousPage", "AccessPage");
-                hmm.updateHMM(getPageIndex("AccessPage"), getPageIndex("Page1"));
-              }}
+              onClick={() => handleClick(1)}
             >
               Go to Page 1
             </Link>
@@ -65,10 +60,7 @@ function AccessPage() {
             <Link
               to="/page2"
               className="access-btn"
-              onClick={() => {
-                sessionStorage.setItem("previousPage", "AccessPage");
-                hmm.updateHMM(getPageIndex("AccessPage"), getPageIndex("Page2"));
-              }}
+              onClick={() => handleClick(2)}
             >
               Go to Page 2
             </Link>
@@ -76,10 +68,7 @@ function AccessPage() {
             <Link
               to="/page3"
               className="access-btn"
-              onClick={() => {
-                sessionStorage.setItem("previousPage", "AccessPage");
-                hmm.updateHMM(getPageIndex("AccessPage"), getPageIndex("Page3"));
-              }}
+              onClick={() => handleClick(3)}
             >
               Go to Page 3
             </Link>
@@ -87,10 +76,7 @@ function AccessPage() {
             <Link
               to="/page4"
               className="access-btn"
-              onClick={() => {
-                sessionStorage.setItem("previousPage", "AccessPage");
-                hmm.updateHMM(getPageIndex("AccessPage"), getPageIndex("Page4"));
-              }}
+              onClick={() => handleClick(4)}
             >
               Go to Page 4
             </Link>
