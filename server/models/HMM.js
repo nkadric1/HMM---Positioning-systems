@@ -43,7 +43,6 @@ class HMM extends InterfaceHMM {
       }
     }
   }
-  
 
   getMatrix() {
     return this.transitionMatrix;
@@ -66,7 +65,6 @@ class HMM extends InterfaceHMM {
           2
         )}, next=${cell.next.toFixed(2)}]`;
       }
-
     }
 
     let sumStr = "\nsum_column:  ";

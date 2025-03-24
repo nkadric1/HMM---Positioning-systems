@@ -23,10 +23,10 @@ function AccessPage() {
     }, 200);
   }, []);
 
- const handleClick = (toIndex)=>{
-  sessionStorage.setItem("previousPage", "AccessPage");
-  hmm.updateHMM(0, toIndex);
- };
+  const handleClick = (toIndex) => {
+    sessionStorage.setItem("previousPage", "AccessPage");
+    hmm.updateHMM(0, toIndex);
+  };
   const handleQuit = () => {
     alert("You have left the system.");
     sessionStorage.clear();
@@ -46,7 +46,12 @@ function AccessPage() {
 
       <div className="access-page-container">
         <div className="groupall">
-          <h1 className="access-title page-title"  onClick={() => handleClick(0)}>Access Page</h1>
+          <h1
+            className="access-title page-title"
+            onClick={() => handleClick(0)}
+          >
+            Access Page
+          </h1>
 
           <div className="access-nav-buttons">
             <Link
@@ -81,10 +86,7 @@ function AccessPage() {
               Go to Page 4
             </Link>
 
-            <Link
-              to="/statistics"
-              className="access-btn access-stats-btn"
-            >
+            <Link to="/statistics" className="access-btn access-stats-btn">
               View Statistics
             </Link>
 

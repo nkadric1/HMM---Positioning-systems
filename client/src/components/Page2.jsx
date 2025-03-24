@@ -40,7 +40,7 @@ function Page2() {
       </div>
 
       <div className="page2-card">
-        <h2 className="page-title"  onClick={() => handleClick(2)}>
+        <h2 className="page-title" onClick={() => handleClick(2)}>
           HMM in Positioning Systems (Page 2)
         </h2>
         <p>

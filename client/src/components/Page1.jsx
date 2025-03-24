@@ -39,9 +39,9 @@ function Page1() {
       </div>
 
       <div className="page1-container">
-          <h1 className="page-title" onClick={() => handleClick(1)}>
-        Introduction to Hidden Markov Models (Page 1)
-      </h1>
+        <h1 className="page-title" onClick={() => handleClick(1)}>
+          Introduction to Hidden Markov Models (Page 1)
+        </h1>
         <p>
           HMMs are used in various fields like speech recognition, positioning,
           and more.

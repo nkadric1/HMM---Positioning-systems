@@ -9,7 +9,7 @@ class Cell extends InterfaceCell {
   }
 
   updateTransition() {
-      this.nb++;
+    this.nb++;
   }
 
   calculateProbabilities(sum_row, sum_column) {
@@ -18,14 +18,13 @@ class Cell extends InterfaceCell {
     } else {
       this.previous = 0;
     }
-  
+
     if (sum_column > 0) {
       this.next = this.nb / sum_column;
     } else {
       this.next = 0;
     }
   }
-  
 }
 
 export default Cell;

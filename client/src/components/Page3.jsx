@@ -40,7 +40,7 @@ function Page3() {
       </div>
 
       <div className="page3-card">
-        <h2 className="page-title"  onClick={() => handleClick(3)}>
+        <h2 className="page-title" onClick={() => handleClick(3)}>
           Indoor Positioning Systems (Page 3)
         </h2>
         <p>
@@ -80,7 +80,6 @@ function Page3() {
           <Link to="/statistics" className="stats-btn" onClick={() => {}}>
             View Statistics
           </Link>
-
           <button className="access-btn access-quit-btn" onClick={handleQuit}>
             Leave/Quit
           </button>
