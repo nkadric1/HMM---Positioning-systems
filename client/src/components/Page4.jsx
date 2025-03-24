@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import "../styles/Page4.css";
 import HMM from "../../../server/models/HMM.js";
 
-const pages = ["Access Page", "Page1", "Page2", "Page3", "Page4"];
+const pages = ["AccessPage", "Page1", "Page2", "Page3", "Page4"];
 const hmm = new HMM(pages);
 
 function Page4() {

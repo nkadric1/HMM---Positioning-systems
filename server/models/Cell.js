@@ -8,10 +8,8 @@ class Cell extends InterfaceCell {
     this.next = 0;
   }
 
-  updateTransition(to) {
-    if (to) {
+  updateTransition() {
       this.nb++;
-    }
   }
 
   calculateProbabilities(sum_row, sum_column) {
